@@ -1,0 +1,196 @@
+// Experticity Pattern Library
+// Pattern Library Buttons
+// Loaded into core.less
+
+// Button Template  - uses variables set in pattern library variables to set button colors
+.btn(@color, @text-color, @hover-color, @hover-text-color, @active-color, @active-text-color, @disabled-color, @disabled-text-color){
+  .animate();
+  .border-radius();
+  .default-text;
+  .btn-regular;
+  box-sizing: border-box;
+  border: solid 1px @color;  
+  display: inline-block;
+  min-width: @button-min-width;
+  margin: @button-margin;
+  padding: @button-padding;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: baseline;
+  white-space: nowrap;
+  background:@color; color: @text-color;
+  border: solid 1px @color;  
+  font-weight: @button-text-weight;
+  &:hover, &.hover{
+    background: @hover-color;
+    border: solid 1px @hover-color;  
+    color:@hover-text-color;
+  }
+  &:active, &.active{
+    background: @active-color;
+    border: solid 1px @active-color;  
+    color:@active-text-color;
+  }
+  &:disabled, &.disabled{
+    background: @disabled-color;
+    color:@disabled-text-color;
+    border-color: @disabled-color;
+    &:hover{
+      background: @disabled-color;
+       border: solid 1px@disabled-color;
+      color:@disabled-text-color;
+    }
+  }
+  i {
+    margin-right: @button-icon-margin;
+  }
+}
+
+// Primary Button Style
+.btn-primary{
+  .btn(
+    @button-color-primary,
+    @button-color-primary-text,
+    @button-color-primary-hover,
+    @button-color-primary-hover-text,
+    @button-color-primary-active,
+    @button-color-primary-active-text,
+    @button-color-primary-disabled,
+    @button-color-primary-disabled-text
+  );
+}
+
+// Primary Secondary Style
+.btn-secondary{
+  .btn(
+    @button-color-secondary,
+    @button-color-secondary-text,
+    @button-color-secondary-hover,
+    @button-color-secondary-hover-text,
+    @button-color-secondary-active,
+    @button-color-secondary-active-text,
+    @button-color-secondary-disabled,
+    @button-color-secondary-disabled-text
+  );
+}
+
+// // Gray Button Style
+.btn-gray{
+  .btn(
+    @button-color-gray,
+    @button-color-gray-text,
+    @button-color-gray-hover,
+    @button-color-gray-hover-text,
+    @button-color-gray-active,
+    @button-color-gray-active-text,
+    @button-color-gray-disabled,
+    @button-color-gray-disabled-text
+  );
+}
+
+// White Button Style
+.btn-white{
+  .btn(
+    @button-color-white,
+    @button-color-white-text,
+    @button-color-white-hover,
+    @button-color-white-hover-text,
+    @button-color-white-active,
+    @button-color-white-active-text,
+    @button-color-white-disabled,
+    @button-color-white-disabled-text
+  );
+}
+
+// Outline Button Style - has border overrides
+.btn-outline{
+  .btn(
+    @button-color-outline,
+    @button-color-outline-text,
+    @button-color-outline-hover,
+    @button-color-outline-hover-text,
+    @button-color-outline-active,
+    @button-color-outline-active-text,
+    @button-color-outline-disabled,
+    @button-color-outline-disabled-text
+  );
+  border: solid 1px @button-color-outline-text;
+  &:hover, &.hover{border: solid 1px @button-color-outline-hover-text;}
+  &:active, &.active{border: solid 1px @button-color-outline-active-text;}
+  &:disabled, &.disabled{border: solid 1px @button-color-outline-disabled-text; &:hover{border: solid 1px @button-color-outline-disabled-text;}}
+}
+
+
+//Button Sizes{
+.btn-small{
+  font-size: @button-small-font-size;
+  line-height: @button-small-line-height;
+}
+.btn-regular{
+  font-size: @button-regular-font-size;
+  line-height: @button-regular-line-height;
+}
+.btn-large{
+  font-size: @button-large-font-size;
+  line-height: @button-large-line-height;
+}
+
+
+// basic link components
+.link-template(@text-color, @hover-text-color, @active-text-color, @active-background-color) {
+  .animate();
+  .border-radius();
+  .default-text;
+  background: transparent;
+  outline: none;
+  box-sizing: border-box;
+  border: none;
+  display: inline-block;
+  margin: @link-margin;
+  padding: @link-padding;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: @link-height;
+  text-align: center;
+  vertical-align: baseline;
+  white-space: nowrap;
+  color: @text-color;
+  font-weight: @button-text-weight;
+  &:hover, &.hover{
+    color: @hover-text-color;
+  }
+  &:active, &.active{
+    color: @active-text-color;
+    background-color: @active-background-color;
+  }
+}
+
+// Primary Link Style
+.link-primary{
+  .link-template(
+    @link-primary-color,  
+    @link-primary-color-hover,
+    @link-primary-color-active,
+    @link-primary-color-active-background
+  );
+}
+
+// Secondary Link Style
+.link-secondary{
+  .link-template(
+    @link-secondary-color,  
+    @link-secondary-color-hover,
+    @link-secondary-color-active,
+    @link-secondary-color-active-background
+  );
+}
+
+// Tertiary Link Style
+.link-tertiary{
+  .link-template(
+    @link-tertiary-color,  
+    @link-tertiary-color-hover,
+    @link-tertiary-color-active,
+    @link-tertiary-color-active-background
+  );
+}

@@ -1,0 +1,26 @@
+// Experticity Pattern Library
+// Pattern Library Base
+// Loaded into core.less
+
+
+// Account for Footer on page
+html {
+	min-height: 100%;
+	position: relative;
+
+}
+
+body {
+	font-family: @font-primary-font-family;
+	font-weight: @font-weight;
+	background: @body-background-color;
+	padding: @body-padding;
+	margin: @body-margin;
+	letter-spacing: @font-character-spacing;
+	transition: all 500ms;
+}
+
+// Prevent Scroll when a modal is open.
+body.modal-open {
+	overflow: hidden;
+}

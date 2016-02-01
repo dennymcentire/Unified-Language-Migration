@@ -1,0 +1,32 @@
+[class^=col-] {
+	box-sizing: border-box;
+}
+
+.container, .row{
+	.clearfix();
+}
+
+// Clear Floats (for grid)
+.float-none() {
+	float: none;
+	@media (min-width: @screen-xs-min) {
+		float: none;
+	}
+	@media (min-width: @screen-sm-min) {
+		float: none;
+	}
+	@media (min-width: @screen-md-min) {
+		float: none;
+	}
+	@media (min-width: @screen-lg-min) {
+		float: none;
+	}
+	@media (min-width: @screen-xl-min) {
+		float: none;
+	}
+}
+
+.center-block {
+	.float-none;
+	margin: 0 auto;
+}

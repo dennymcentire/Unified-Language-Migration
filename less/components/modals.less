@@ -1,0 +1,41 @@
+.modal {
+  .center-horizontal();
+
+  background: #fff;
+  border: 1px solid @color-mediumGray;
+  display: none;
+  height: 550px;
+  position: absolute;
+  top: 60px;
+  width: 550px;
+
+  &.active {
+    display: block;
+  }
+}
+
+.modal-close-button {
+  background: url(../images/icons/icon-x-18.svg) center center no-repeat;
+  background-size: 18px;
+  cursor: pointer;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+}
+
+.scrim {
+  background-color: rgba(0,0,0,.6);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+
+  &.active {
+    display: block;
+  }
+}

@@ -1,0 +1,58 @@
+.alert-banner {
+	.default-text();
+	margin-bottom: 0px;
+	color: @color-white;
+	overflow: hidden;
+	max-height: 0px;
+	background-color: @color-info-dark;
+	.container {
+		position: relative;
+	}
+	div.alert-before, div.alert-after {
+		width: 36px;
+		float: left;
+		font-size: 24px;
+		padding: 0px 6px;
+		.center-vertical();
+	}
+	div.alert-after {
+		right: 0px;
+		cursor: pointer;
+	}
+	div.alert-contents {
+			padding: 6px 42px;
+			min-height: 36px;
+			text-align: center; 
+			a {
+				cursor: pointer;
+				font-weight: inherit;
+				text-decoration: underline;
+			}
+	}
+	&.banner-in {
+		.animation(banner-in 1s ease-out);
+		max-height: 300px;
+	}
+	&.banner-out {
+		.animation(banner-out 0.5s ease);
+		max-height: 0px;
+	}
+}
+
+@-webkit-keyframes banner-out {
+    from {max-height: 36px;}
+    to {max-height: 0px;}
+} 
+@keyframes banner-out {
+    from {max-height: 36px;}
+    to {max-height: 0px;}
+}
+
+@-webkit-keyframes banner-in {
+    from {max-height: 0px;}
+    to {max-height: 100px;}
+} 
+@keyframes banner-in {
+    from {max-height: 0px;}
+    to {max-height: 100px;}
+}

@@ -1,0 +1,89 @@
+// Experticity Pattern Library
+// Pattern Library Media
+// Loaded into core.less
+
+/******************************************************************
+							E-11. Tabs
+
+  Larger layouts: |- - - _______|
+    Tabs sit along the left of the container leaving space to the right
+
+  Smaller layouts: |- - -|
+    Tabs are scaled to fit the full width of the available space (using a table display)
+
+*******************************************************************/
+
+
+// Tab container
+.tabs {
+  border-bottom: solid 1px @color-coolGray-dark;
+  display: table; // table for small layouts to let the tabs scale themselves to fit the space
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  // Tab item
+  & > .tab {
+    .default-text;
+    border-bottom: solid 3px transparent;
+    color: @link-tertiary-color;
+    cursor: pointer;
+    display: table-cell;
+    font-weight: @font-weight-normal;
+    margin: 0 0 -1px;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    .transition(0.3s);
+
+    @media (min-width: @screen-md-min) {
+      padding: @tab-padding-lg;
+      width: auto;
+    }
+
+    // Selected state
+    &.selected {
+      border-color: @color-primary;
+      color: @font-color;
+    }
+
+    // Unselected, hover & focus states
+    &:hover:not(.selected),
+    &:focus:not(.selected) {
+      color: @link-tertiary-color-hover; // Give some feedback for the hover/focus
+    }
+
+    // Inner link element
+    & > a {
+      border-bottom: none;
+      display: block;
+      outline: none;
+      padding: @tab-padding-sm;
+      text-decoration: none;
+    }
+  }
+
+  // Tab container hover state
+  &:hover .tab {
+    border-color: transparent;
+
+    &:hover {
+      border-color: @color-primary;
+    }
+  }
+
+  // > Medium viewport size (standard sizing)
+  @media (min-width: @screen-md-min) {
+    display: block; // block to let the tabs sit along the left of the container row
+
+    & > .tab {
+      display: inline-block;
+      width: auto;
+
+      & > a {
+        padding: @tab-padding-lg;
+      }
+    }
+  }
+}

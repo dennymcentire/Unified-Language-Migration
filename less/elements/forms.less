@@ -1,0 +1,289 @@
+// Experticity Pattern Library
+// Pattern Library Forms
+// Loaded into core.less
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+input, textarea, input[type="search"]{
+  .default-text();
+  font-size: @form-font-size;
+  display: block;
+  width: 100%;
+  height: @form-height;
+  padding: @form-padding;
+  margin: @form-margin;
+  border: solid 1px @form-border-color;
+  .border-radius();
+  background-color: @form-background-color;
+  box-sizing: border-box;
+
+  &.info{
+    border-color: @form-border-info;
+  }
+  &.success{
+    border-color: @form-border-success;
+    background:
+            @form-background-color
+            url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAASCAYAAACw50UTAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJhJREFUeNpiYBgF1ABmu2Y7EKuWkQRDBYDUfiA2AOIFp9xSEwnpYSLDYBBIAIo1UMVwIOhHMpiBpGABuiIBagDIu4Vorp4PcimaPqKChREaQfuxaaTEYBBgweJdUHjC2eQaDDN8ARDHo1mSgEUtSQYjhzl6aqDYYJR0jscCsgzGyERYLCDbYKw5FGoBKFl+QE+Wo4AqACDAAHWIPYlhIoSyAAAAAElFTkSuQmCC)
+            no-repeat
+            right center;
+  }
+  &.warning{
+    border-color: @form-border-warning;
+    outline: none;
+    padding-right: 30px;
+    background:
+            @form-background-color
+            url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAASCAYAAACw50UTAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAGdJREFUeNpiYBgFWAAjNsHrlgYCQMoASeiC5vELH0g1nAmHeAEQ70fCBeS4nImWwUKs4QeGrMupaviBQe9yFhziF4C4EY1PE5d/ICcD4cuhDtDMAwOOQAsODIkwf4CWYh6MrCIXIMAAPm8W++VmedwAAAAASUVORK5CYII=)
+            no-repeat
+            right center;
+  }
+  &.guidance {
+    background: @form-background-color;
+    padding-right: 84px;
+  }
+  &.form-large {
+    font-size: @form-large-font-size;
+    height: @form-large-height;
+  }
+}
+
+
+select {
+  .default-text;
+  font-size: 16px;
+  height: @form-height;
+  width: 100%;
+  background-color: @form-background-color;
+  border: solid 1px @form-border-color;
+  margin: @form-margin;
+  .border-radius();
+  &.form-large {
+    font-size: @form-large-font-size
+  }
+
+}
+
+//Appended Input
+.input-append {
+  white-space: nowrap;
+  padding-right: @form-height;
+  position: relative;
+  input {
+    .border-right-radius(0px);
+    border-right: 0;
+  }
+  .add-on {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    .border-right-radius(@base-border-radius);
+    text-align: center;
+    line-height: (@form-height - 2px);
+    height: @form-height;
+    width: @form-height;
+    background-color: @color-lightGray-dark;
+    border: 1px solid @form-border-color;
+    color: @color-darkGray-lighter;
+    cursor: pointer;
+  }
+}
+
+//Default Checkbox
+input[type="checkbox"] {
+  display: inline;
+  position: relative;
+  margin-top: 16px;
+  vertical-align: top;
+  height: @form-checkbox-height;
+  width: @form-checkbox-width;
+}
+
+input[type="checkbox"]:after {
+  content: "";
+  color: @form-checkbox-check-color;
+  background-color: @form-background-color;
+  border: solid 2px @form-checkbox-color;
+  .border-radius();
+  line-height: 16px;
+  text-align: center;
+  font-size: 13px;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  .animate();
+}
+
+input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  .animate();
+}
+
+input[type="checkbox"]:checked:after {
+  content: '\f00c'; //Font Awesome Check Icon
+  font-family: "FontAwesome";
+
+}
+
+
+input[type="checkbox"]:disabled {
+  .opacity(50);
+}
+
+
+//Toggle Checkbox
+input[type="checkbox"].toggle {
+  text-indent: -5000px;
+  background: @form-border-color;
+  height: @form-checkbox-toggle-height;
+  width: @form-checkbox-toggle-width;
+  border-radius: @form-checkbox-toggle-height / 2;
+}
+
+input[type="checkbox"].toggle:before {
+  height: @form-checkbox-toggle-height;
+  width: @form-checkbox-toggle-width;
+  border-radius: @form-checkbox-toggle-height / 2;
+  background: @form-checkbox-color;
+}
+
+input[type="checkbox"].toggle:after {
+  display: block;
+  height: @form-checkbox-toggle-height;
+  width: @form-checkbox-toggle-height;
+  border-radius: @form-checkbox-toggle-height / 2;
+  background: @form-background-color;
+  border: solid 3px @form-checkbox-color;
+}
+
+input[type="checkbox"].toggle:checked:before {
+  width: @form-checkbox-toggle-width;
+  background: @form-checkbox-color-active;
+}
+
+input[type="checkbox"].toggle:checked:after {
+  left: @form-checkbox-toggle-width - @form-checkbox-toggle-height;
+  border-color: @form-checkbox-color-active;
+}
+
+
+
+//Toggle Small Checkbox
+input[type="checkbox"].toggle-small {
+  text-indent: -5000px;
+  background: @form-checkbox-color;
+  height: @form-checkbox-toggle-small-height;
+  width: @form-checkbox-toggle-small-width;
+  border-radius: @form-checkbox-toggle-small-height / 2;
+  margin: 2px 0 0 2px; // fix overlap of standard checkbox underneath
+}
+
+input[type="checkbox"].toggle-small:before {
+  height: @form-checkbox-toggle-small-height;
+  width: @form-checkbox-toggle-small-width;
+  top: -2px; // fix overlap of standard checkbox underneath
+  left: -2px; // fix overlap of standard checkbox underneath
+  border-radius: @form-checkbox-toggle-small-height / 2;
+  background: @form-checkbox-color;
+}
+
+input[type="checkbox"].toggle-small:after {
+  height: @form-checkbox-toggle-small-height;
+  width: @form-checkbox-toggle-small-height;
+  top: -2px; // fix overlap of standard checkbox underneath
+  left: -2px; // fix overlap of standard checkbox underneath
+  border-radius: @form-checkbox-toggle-small-height / 2;
+  background: white;
+  border: solid 3px @form-checkbox-color;
+}
+
+input[type="checkbox"].toggle-small:checked:before {
+  width: @form-checkbox-toggle-small-width;
+  background: @form-checkbox-color-active;
+}
+
+input[type="checkbox"].toggle-small:checked:after {
+  left: @form-checkbox-toggle-small-width - @form-checkbox-toggle-small-height;
+  border-color: @form-checkbox-color-active;
+}
+
+
+
+
+
+//Radio Button
+input[type="radio"] {
+  display: inline-block;
+  position: relative;
+  height: @form-radio-height;
+  width: @form-radio-width;
+}
+
+input[type="radio"]:before {
+  content: "";
+  background-color: @form-background-color;
+  border: solid 1px @form-checkbox-color;
+  .border-radius(50%);
+  line-height: 16px;
+  text-align: center;
+  font-size: 13px;
+  position: absolute;
+  display: block;
+  top: -1px; // fix overlap of standard radio underneath
+  left: -1px; // fix overlap of standard radio underneath
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+input[type="radio"]:after {
+  content: "";
+  background-color: @form-background-color;
+  border: solid 2px @form-background-color;
+  .border-radius(50%);
+  line-height: 16px;
+  text-align: center;
+  font-size: 13px;
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: 0px;
+  height: @form-radio-height - 2px;
+  width: @form-radio-width - 2px;
+}
+
+input[type="radio"]:checked:after {
+  background-color: @form-radio-selected-color;
+}
+
+label {
+  .label;
+  &.warning {
+    color: @color-primary-darker; /*@color-primary-darker;*/
+  }
+}
+
+label.checkbox-label {
+  display: inline-block;
+  width: 80%;
+  margin-left: 10px;
+  padding-top: 12px;
+  line-height: 24px;
+}
+
+//Todo: Move this out into components

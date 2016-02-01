@@ -1,0 +1,54 @@
+
+//== Media queries breakpoints
+
+// Extra small screen 
+@screen-xs:                  375px;
+@screen-xs-min:              @screen-xs;
+@screen-phone:               @screen-xs-min;
+
+// Small screen 
+@screen-sm:                  599px;
+@screen-sm-min:              @screen-sm;
+@screen-tablet:              @screen-sm-min;
+
+// Medium screen 
+@screen-md:                  736px;
+@screen-md-min:              @screen-md;
+@screen-desktop:             @screen-md-min;
+
+// Large screen 
+@screen-lg:                  1024px;
+@screen-lg-min:              @screen-lg;
+@screen-lg-desktop:          @screen-lg-min;
+
+// X-Large screen 
+@screen-xl:                  1280px;
+@screen-xl-min:              @screen-xl;
+@screen-xl-desktop:          @screen-xl-min;
+
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+@screen-lg-max:              (@screen-xl-min - 1);
+
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+@grid-columns:              12;
+//** Padding between columns. Gets divided in half for the left and right.
+@grid-gutter-width:         24px;
+
+
+// Container sizes
+//## Define the maximum width of `.container` for different screen sizes.
+//Container sizes
+@container-xs:              100%;
+@container-sm:              599px;
+@container-md:              736px;
+@container-lg:              1024px;
+@container-xl:             	1280px;

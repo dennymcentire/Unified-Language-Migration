@@ -1,0 +1,40 @@
+// Experticity Pattern Library
+// Pattern Library Tables
+// Loaded into core.less
+
+table{
+  background: @table-background-color;
+  margin: @table-margin;
+  border: none;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
+  td, th{
+    color: @table-color;
+    padding: @table-padding;
+    border-right: solid 1px @table-border-color;
+      &:last-child{
+        border-right:none;
+      }
+  }
+  thead, tfoot{
+    background-color: @table-head-background-color;
+    color: @table-head-color; 
+    th{}
+  }
+  tbody{
+    tr{
+      &:nth-child(even){
+        background-color: @table-background-alt;
+      }
+      td {}
+    }
+  }
+}
+
+table.large{
+  th, td{
+    padding: @table-large-padding;
+  }
+}

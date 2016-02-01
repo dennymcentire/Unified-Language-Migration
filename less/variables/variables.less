@@ -1,0 +1,540 @@
+// Experticity Pattern Library
+// Pattern Library Variables
+
+
+/**
+
+This file contains all variables for the Experticity core.less files.
+All changes should be made to this file instead of the individual Less
+files for optimum compatibility.
+
+	Contents
+
+
+	Styles
+	__________________
+
+	S-1. Base
+	S-2. Animations
+	S-3. Colors
+	S-4. Shadows
+	S-5. Fonts
+
+
+
+	Elements
+	__________________
+
+	E-1. Badges
+	E-2. Buttons
+	E-3. Forms
+	E-4. Images
+	E-5. Icons
+	E-6. Labels
+	S-7. logos
+	E-8. Media
+	E-9. Misc
+	E-10. Tables
+	E-11. Tabs
+	E-12. Trainometer
+	E-13. Typography
+
+
+	Components
+	__________________
+
+	C-1. Cards
+	C-2. Global Navigation
+	C-3. Global Footer
+
+
+**/
+
+/******************************************************************
+							S-1. Base
+*******************************************************************/
+
+@body-background-color:					@color-off-white;
+@body-padding: 							0 0 0 0;
+@body-margin: 							@global-nav-height 0 (@global-footer-height+24px);
+
+@base-border-radius: 					3px;
+
+
+
+/******************************************************************
+							S-2. Animations
+*******************************************************************/
+
+@animation-speed: 						300ms;
+@animation-speed-fast: 					100ms;
+@animation-speed-slow: 					800ms;
+@animation-easing: 						ease-in-out;
+
+
+
+/******************************************************************
+							S-3. Colors
+*******************************************************************/
+
+@color-white:							#fff;
+@color-black:							#000;
+
+@color-primary:							#EF4036;
+@color-primary-light:					#F66B5E;
+@color-primary-dark:					#D73930;
+@color-primary-darker:					#D1221D;
+
+@color-info: 							#5BB6E7;
+@color-info-light:						#7CC5EC;
+@color-info-dark:						#52A3CF;
+@color-info-darker:						#4296CB;
+
+@color-success: 						#36BA9B;
+@color-success-light:					#67D3BF;
+@color-success-dark:					#2BAC87;
+@color-success-darker:					#259273;
+
+@color-warning: 						#F68F4A;
+@color-warning-light:					#F8A554;
+@color-warning-dark:					#F57E43;
+@color-warning-darker:					#DB6429;
+
+@color-danger: 							#844F9A;
+@color-danger-light:					#9A5AAE;
+@color-danger-dark:						#763B8F;
+@color-danger-darker:					#5E2F79;
+
+@color-accent:							#FDF4D2;
+@color-accent-light:					#FEFDF4;
+@color-accent-dark:						#FCF0C0;
+@color-accent-darker:					#EFE4B6;
+
+@color-yellow: 							#DDC74A;
+
+@color-darkGray:						#6B655F;
+@color-darkGray-light:					#7A756F;
+@color-darkGray-dark:					#59544F;
+@color-darkGray-darker:					#403C39;
+
+@color-mediumGray:						#F6F3EF;
+@color-mediumGray-light:				#A39E93;
+@color-mediumGray-dark:					#8B867D;
+@color-mediumGray-darker:				#736E61;
+
+@color-lightGray:						#F6F3EF;
+@color-lightGray-light:					#F9F7F4;
+@color-lightGray-dark:					#E9E7E3;
+@color-lightGray-darker:				#D8D1C6;
+
+@color-coolGray:						#e4e4e6;
+@color-coolGray-light:					#f7f7f8;
+@color-coolGray-dark:					#cacacc;
+@color-coolGray-darker:					#B1B1B3;
+
+@color-facebookBlue:                    #3b5998;
+
+// Deprecated
+@color-darkGray-lighter:				@color-mediumGray-light;
+@color-off-white:						@color-coolGray-light;
+
+
+
+
+/******************************************************************
+							S-4. Shadows
+*******************************************************************/
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+@shadow-level-1: 						0 1px 2px 1px rgba(107,101,95,0.20);
+@shadow-level-2: 						0px 1px 2px 2px rgba(107,101,95,0.17);
+@shadow-level-3: 						0px 2px 3px 3px rgba(107,101,95,0.15);
+/* Levels 4 and 5 are deprecated*/
+@shadow-level-4: 						0 14px 28px rgba(0,0,0,0.25);
+@shadow-level-5: 						0 19px 38px rgba(0,0,0,0.30);
+@shadow-transition: 				box-shadow 0.3s;
+
+@text-shadow-level-1: 			0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+@text-shadow-level-2: 			0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+@text-shadow-level-3: 			0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+@text-shadow-level-4: 			@shadow-level-4;
+@text-shadow-level-5: 			@shadow-level-5;
+@text-shadow-transition: 		text-shadow 0.3s;
+
+
+
+
+
+/******************************************************************
+							S-5. Fonts
+*******************************************************************/
+
+@font-color: 							@color-darkGray;
+@font-color-light:                      @color-coolGray-darker;
+@font-size:								15px;
+@font-line-height:						1.5em;
+@font-weight:							@font-weight-light;
+@font-margin: 							0 0 1em 0;
+@font-padding: 							0;
+@font-character-spacing: 				.5px;
+
+@font-weight-light:						200;
+@font-weight-normal:					400;
+@font-weight-bold:						600;
+
+@font-primary-font-family: 				'GT Pressura', sans-serif;
+@font-secondary-font-family: 			'Mr Dafoe', cursive;
+@font-icon-font: 						"FontAwesome";
+@font-ux-font:							"Experticity UX";
+
+
+
+
+
+/******************************************************************
+							E-1. Badges
+*******************************************************************/
+
+@badge-padding: 						4px 8px;
+@badge-font-size: 						1em;
+@badge-font-weight: 					@font-weight-normal;
+@badge-color: 							@color-white;
+@badge-line-height: 					@font-size;
+@badge-background: 						@font-color;
+@badge-border-radius:  					10px;
+@badge-button-margin-left: 				10px;
+@badge-button-background: 				@color-white;
+@badge-button-color: 					@button-color-primary;
+
+
+
+/******************************************************************
+							E-2. Buttons
+*******************************************************************/
+
+@button-margin: 						3px;
+@button-padding: 						0 20px;
+@button-min-width: 						3px;
+@button-text-weight: 					@font-weight-normal;
+@button-icon-margin: 					10px;
+
+
+//Button Colors
+@button-color-primary: 					@color-primary;
+@button-color-primary-text:				@color-white;
+@button-color-primary-hover: 			@color-primary-dark;
+@button-color-primary-hover-text: 		@button-color-primary-text;
+@button-color-primary-active: 			@color-primary-dark;
+@button-color-primary-active-text: 		fade(@button-color-primary-text, 50%);
+@button-color-primary-disabled:			fade(@button-color-primary, 50%);
+@button-color-primary-disabled-text:	@button-color-primary-text;
+
+@button-color-secondary: 				@color-white;
+@button-color-secondary-text:			@color-info;
+@button-color-secondary-hover: 			@color-white;
+@button-color-secondary-hover-text: 	@button-color-secondary-text;
+@button-color-secondary-active: 		fade(@color-info, 10%);
+@button-color-secondary-active-text: 	@color-info;
+@button-color-secondary-disabled:		fade(@button-color-secondary, 50%);
+@button-color-secondary-disabled-text:	fade(@button-color-secondary-text, 50%);
+
+@button-color-gray: 					@color-coolGray;
+@button-color-gray-text:				@color-darkGray;
+@button-color-gray-hover: 				@color-coolGray-darker;
+@button-color-gray-hover-text: 			@button-color-gray-text;
+@button-color-gray-active: 				@button-color-gray-hover;
+@button-color-gray-active-text: 		fade(@button-color-gray-text, 50%);
+@button-color-gray-disabled:			fade(@button-color-gray, 50%);
+@button-color-gray-disabled-text:		fade(@button-color-gray-text, 50%);
+
+@button-color-white: 					@color-white;
+@button-color-white-text:				@color-darkGray-dark;
+@button-color-white-hover: 				@button-color-white;
+@button-color-white-hover-text: 		@color-darkGray-darker;
+@button-color-white-active: 			@button-color-white;
+@button-color-white-active-text: 		fade(@button-color-white-hover-text, 50%);
+@button-color-white-disabled:			fade(@button-color-white, 50%);
+@button-color-white-disabled-text:		fade(@button-color-white-text, 50%);
+
+@button-color-outline: 					transparent;
+@button-color-outline-text:				@color-darkGray-light;
+@button-color-outline-hover: 			transparent;
+@button-color-outline-hover-text: 		@color-darkGray;
+@button-color-outline-active: 			transparent;
+@button-color-outline-active-text: 		fade(@button-color-outline-hover-text, 50%);
+@button-color-outline-disabled:			transparent;
+@button-color-outline-disabled-text:	fade(@button-color-outline-hover-text, 30%);
+
+//Button Sizes
+@button-small-font-size:				12px;
+@button-small-line-height:				30px; //Sets button height
+
+@button-regular-font-size:				15px;
+@button-regular-line-height:			48px; //Sets button height
+
+@button-large-font-size:				18px;
+@button-large-line-height:				48px; //Sets button height
+
+//Standalone Links
+@link-margin: 							3px;
+@link-padding: 							0 12px;
+@link-height: 							30px;
+
+@link-primary-color:					@color-info; 					//text color
+@link-primary-color-hover:				@color-info-dark;
+@link-primary-color-active:				@color-info-dark;
+@link-primary-color-active-background:	fade(@color-info, 10%);
+
+@link-secondary-color:					@color-darkGray-dark;				//text color
+@link-secondary-color-hover:			@color-primary;
+@link-secondary-color-active:			@color-primary;
+@link-secondary-color-active-background:fade(@color-primary, 10%);
+
+@link-tertiary-color:					@color-coolGray-dark;				//text color
+@link-tertiary-color-hover:				@color-coolGray-darker;
+@link-tertiary-color-active:			@color-coolGray-darker;
+@link-tertiary-color-active-background:	fade(@color-coolGray-dark, 10%);
+
+
+
+/******************************************************************
+							E-3. Forms
+*******************************************************************/
+
+@form-background-color:					@color-white;
+@form-font-size: 					    15px;
+@form-large-font-size: 					18px;
+@form-padding: 							5px 5px 5px 9px;
+@form-margin: 							0 0 12px 0;
+@form-height: 							42px;
+@form-large-height: 					48px;
+
+@form-border-color: 					@color-coolGray-dark;
+@form-border-info: 						@color-info-light;
+@form-border-success:					@color-success;
+@form-border-warning: 					@color-primary-dark;
+
+@form-checkbox-color: 					@color-coolGray-dark;
+@form-checkbox-color-active: 			@color-success-dark;
+@form-checkbox-check-color: 			@color-darkGray-dark;
+@form-checkbox-toggle-height: 			30px;
+@form-checkbox-toggle-width: 			60px;
+@form-checkbox-toggle-small-height: 	20px;
+@form-checkbox-toggle-small-width: 		40px;
+@form-checkbox-height: 					20px;
+@form-checkbox-width: 					20px;
+
+@form-radio-selected-color: 			@color-darkGray;
+@form-radio-height: 					18px;
+@form-radio-width: 						18px;
+
+
+
+/******************************************************************
+							E-4. Images
+*******************************************************************/
+
+@image-thumbnail-border-width: 			2px;
+@image-thumbnail-border-color: 			@color-white;
+@image-thumbnail-shadow: 				0 0 0 1px rgba(0, 0, 0, 0.2);
+
+@image-avatar-border-width: 			2px;
+@image-avatar-border-color: 			@color-white;
+@image-avatar-shadow: 					0 0 0 1px rgba(0, 0, 0, 0.2);
+@image-avatar-large-size:				200px;
+@image-avatar-small-size:				30px;
+
+// Campaign Header Avatar
+@image-header-avatar-large-size: 78px;
+@image-header-avatar-small-size: 48px;
+
+
+
+/******************************************************************
+							E-5. Icons
+*******************************************************************/
+
+
+
+
+
+/******************************************************************
+							E-6. Labels
+*******************************************************************/
+@label-text-color: 						@color-white;
+@label-padding: 						6px 12px;
+@label-margin: 							3px;
+@label-shadow: 							@shadow-level-1;
+@label-small-text-size: 				10px;
+@label-small-padding:					3px;
+@label-primary-color: 					@color-primary;
+@label-info-color: 						@color-info-dark;
+@label-success-color: 					@color-success-dark;
+@label-icon-margin: 					10px;
+
+
+
+/******************************************************************
+							E-7. Logos
+*******************************************************************/
+
+@logo-padding: 							20px;
+
+
+
+/******************************************************************
+							E-8. Media
+*******************************************************************/
+
+@meda-border: 							0;
+
+
+
+/******************************************************************
+							E-9. Misc
+*******************************************************************/
+
+@misc-hr-height: 						1px;
+@misc-hr-color: 						@color-lightGray-darker;
+@misc-hr-margin: 						10px 0px;
+
+
+
+/******************************************************************
+							E-10. Tables
+*******************************************************************/
+
+@table-background-color: 				@color-white;
+@table-background-alt: 					@color-lightGray-light;
+
+@table-color: 							@color-darkGray-light;
+@table-border-color:					@color-darkGray-light;
+@table-padding:							6px 12.5px;
+@table-margin: 							12px 0;
+
+@table-head-color:						@color-darkGray-light;
+@table-head-background-color:			@color-lightGray-darker;
+
+@table-large-padding:  					12px 25px;
+
+
+
+/******************************************************************
+							E-11. Tabs
+*******************************************************************/
+@tab-padding-sm: 							5px 12px; // Min padding around tabs when in small layout
+@tab-padding-lg: 							5px 24px; // Standard padding for tabs
+
+
+
+/******************************************************************
+							E-12. Trainometer
+*******************************************************************/
+@trainometer-cell-color: 						@color-white;
+@trainometer-cell-color-completed: 	@color-info;
+@trainometer-cell-height:						6px;
+@trainometer-cell-padding:					2%;
+
+
+
+/******************************************************************
+							E-13. Type
+*******************************************************************/
+
+@type-title-color:						@color-darkGray-dark;
+
+@type-title-xl-size: 					36px;
+@type-title-xl-line-height: 			42px;
+@type-title-xl-weight: 					@font-weight-normal;
+@type-title-xl-color: 					@type-title-color;
+@type-title-xl-margin: 					0 0 24px 0;
+
+@type-title-lg-size: 					30px;
+@type-title-lg-line-height: 			36px;
+@type-title-lg-weight: 					@font-weight-normal;
+@type-title-lg-color: 					@type-title-color;
+@type-title-lg-margin: 					0 0 24px 0;
+
+@type-title-md-size: 					24px;
+@type-title-md-line-height: 			30px;
+@type-title-md-weight: 					@font-weight-normal;
+@type-title-md-color: 					@type-title-color;
+@type-title-md-margin: 					0 0 24px 0;
+
+@type-title-sm-size: 					21px;
+@type-title-sm-line-height: 			27px;
+@type-title-sm-weight: 					@font-weight-normal;
+@type-title-sm-color: 					@type-title-color;
+@type-title-sm-margin: 					0 0 24px 0;
+
+@type-title-xs-size: 					18px;
+@type-title-xs-line-height: 			24px;
+@type-title-xs-weight: 					@font-weight-normal;
+@type-title-xs-color: 					@type-title-color;
+@type-title-xs-margin: 					0 0 24px 0;
+
+@type-label-size: 						@font-size;
+@type-label-line-height: 				@font-line-height;
+@type-label-weight: 					@font-weight-normal;
+@type-label-color: 						@font-color;
+@type-label-margin: 					0 12px 0 0;
+
+@type-small-text-size: 					12px;
+@type-small-text-line-height: 			18px;
+@type-small-text-weight: 				@font-weight;
+@type-small-text-color: 				@font-color;
+
+@type-link-weight: 						@font-weight-normal;
+@type-link-border-color: 						@font-color;
+@type-link-border-width: 				1px;
+@type-link-border-style: 				dotted;
+
+@type-strong-weight: 					@font-weight-bold;
+
+@type-list-indent: 						20px;
+@type-list-margin: 						0 0 1em 0;
+@type-list-item-margin: 				0 0 0.5em 0;
+@type-list-line-height: 				1.2em;
+@type-list-style-position: 				initial;
+
+
+
+/******************************************************************
+							C-1. Cards
+*******************************************************************/
+
+@card-background: 						@color-white;
+@card-margin-xs: 						12px;
+@card-margin-sm: 						18px;
+@card-margin-md: 						18px;
+@card-margin-lg: 						18px;
+@card-margin-xl: 						24px;
+
+@card-padding: 							12px;
+
+
+@card-type-color: 						@type-title-color;
+@card-type-title-color:					@type-title-color;
+@card-type-link-color: 					@link-primary-color;
+
+
+
+
+/******************************************************************
+							C-2. Global Nav
+*******************************************************************/
+
+@global-nav-height: 					54px;
+@global-nav-z-index: 					10000;
+@global-nav-actionsBorder: solid 1px @color-lightGray-dark;
+
+
+
+
+
+/******************************************************************
+							C-3. Global Footer
+*******************************************************************/
+
+@global-footer-height: 				210px;
+@global-footer-color:  				@color-darkGray-dark;
+@global-footer-text-color:  		@color-lightGray-darker;

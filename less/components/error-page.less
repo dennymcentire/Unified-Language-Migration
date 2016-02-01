@@ -1,0 +1,176 @@
+// Experticity Pattern Library
+// Pattern Library Media
+
+
+/******************************************************************
+  Error Page Styles
+
+  Example:
+  <html>
+  <head></head>
+  <body>
+    {{> core/layout}}
+    {{> core/error errorTitle="404 - Page Not Found" errorMessage="Message for 404 error"}}
+  </body>
+  </html>
+*******************************************************************/
+
+
+@gutter-width: 40px;
+@gutter-width-sm: 20px;
+
+
+.error-page {
+  .container-padding;
+  padding: @gutter-width-sm;
+  position: relative;
+  .transition(margin-top @animation-speed ease-in, min-height @animation-speed ease-in, width @animation-speed ease-in, height @animation-speed ease-in);
+
+  .brand-panel,
+  .error-panel {
+    .make-xs-column(6, @gutter-width);
+  }
+
+
+  .brand-panel {
+    .exp-nav-logo-link {
+      border: none;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+
+      img {
+        max-width: 210px;
+      }
+    }
+  }
+
+  .error-panel {
+    border-top: 2px solid @color-coolGray-dark;
+    margin-top: @gutter-width-sm;
+    padding-top: @gutter-width-sm;
+
+    h1 {
+      .type-title-md();
+    }
+
+    a {
+      border-bottom: none;
+      color: @link-primary-color;
+      text-decoration: none;
+
+      &:hover {
+        color: @link-primary-color-hover;
+      }
+      &:active {
+        color: @link-primary-color-active;
+      }
+    }
+  }
+
+  // XS Only
+  @media (min-width: @screen-xs-min) and (max-width: @screen-xs-max) {
+    padding-top: 0;
+
+    .error-page-content {
+      .center-vertical();
+      width: 98%; // Hacky but effective at getting the panel to the full-ish width since the position is absolute
+    }
+  }
+
+  // XS+
+  @media (min-width: @screen-xs-min) {
+    min-height: 490px;
+
+    .error-page-bg {
+      transform: translate(0, 30px);
+      width: 100%;
+
+      i {
+        font-size: 500px;
+      }
+    }
+
+    .brand-panel {
+      .exp-nav-logo-link {
+        text-align: right;
+      }
+    }
+
+    .error-panel {
+      border-left: 2px solid @color-coolGray-dark;
+      border-top: none;
+      margin-top: 0;
+    }
+  }
+
+  // Small+
+  @media (min-width: @screen-sm-min) {
+    padding-top: 180px;
+
+    .error-page-bg {
+      text-align: left;
+      transform: translate(140px, 30px);
+      width: auto;
+      .transition(transform @animation-speed ease-in-out);
+
+      i {
+        font-size: 500px;
+      }
+    }
+  }
+
+  // Medium+
+  @media (min-width: @screen-md-min) {
+    min-height: 585px;
+    padding-top: 200px;
+    .transition(padding-top @animation-speed ease-in);
+
+    .error-page-bg {
+      text-align: left;
+      transform: translate(140px, 30px);
+
+      i {
+        font-size: 600px;
+      }
+    }
+  }
+}
+
+
+.error-page-bg {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transform: translate(0, 20px);
+  width: 100%;
+  z-index: -2; // This feels a bit hacky to get behind the footer
+
+  i {
+    color: fade(@color-coolGray, 30%);
+    font-size: 400px;
+    .transition(font-size @animation-speed ease-in-out);
+  }
+}
+
+
+.error-page-content {
+  margin: 0 auto;
+  max-width: 800px;
+  .clearfix();
+}
+
+.error-stacktrace {
+  .card;
+  margin-top: 40px;
+  padding: 15px 20px;
+
+  .error-stacktrace-title {
+    .type-title-sm();
+  }
+
+  .error-stacktrace-content {
+    .type-small-text();
+  }
+}

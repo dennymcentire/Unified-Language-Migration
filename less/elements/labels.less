@@ -1,0 +1,33 @@
+// Experticity Pattern Library
+// Pattern Library Labels
+// Loaded into core.less
+
+.label(@background) {
+	.default-text();
+	.border-radius();
+	color: @label-text-color;
+	padding: @label-padding;
+	margin: @label-margin;
+	box-shadow: @label-shadow;
+	background-color: @background;
+	&.label-small {
+		font-size: @label-small-text-size;
+		padding: @label-small-padding;
+		font-weight: @font-weight-normal;
+	}
+	i {
+		margin-right: @label-icon-margin;
+	}
+}
+
+.label-primary {
+	.label(@color-primary);
+}
+
+.label-info {
+	.label(@color-info-dark);
+}
+
+.label-success {
+	.label(@color-success-dark);
+}

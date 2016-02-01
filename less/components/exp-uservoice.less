@@ -1,0 +1,53 @@
+// User Voice Modal Overrides
+
+#exp-uv-trigger {
+  bottom: 10px;
+  cursor: pointer;
+  height: 39px;
+  position: fixed;
+  right: 12px;
+  width: 39px;
+  z-index: @modal-z-index - 1; // 1 below modal z-index so it sits below the mask
+
+  > img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+#exp-uv-modal {
+  .modal-header {
+    padding-right: 30px;
+
+    h1 {
+      font-size: 15px;
+      .transition(font-size 100ms ease);
+
+      @media (min-width: @screen-md-min) {
+        font-size: @type-title-xs-size;
+      }
+
+      @media (min-width: @screen-lg-min) {
+        font-size: @type-title-md-size;
+      }
+    }
+
+    .close-icon {
+      border-bottom: none;
+      color: @color-coolGray-dark;
+      cursor: pointer;
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+  }
+
+  @media (min-width: @screen-md-min) {
+    max-height: 400px;
+  }
+
+  @media (min-width: @screen-lg-min) {
+    max-height: 300px;
+  }
+}

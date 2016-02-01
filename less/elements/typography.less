@@ -1,0 +1,166 @@
+// Experticity Pattern Library
+// Pattern Library Type
+// Loaded into core.less
+
+
+
+// Reset All typography
+
+
+h1,h2,h3,h4,h5,h6,p,li{
+	.default-text;
+	
+}
+
+
+
+a{
+	font-weight: @type-link-weight;
+	border-bottom: @type-link-border-width @type-link-border-style @type-link-border-color;
+	text-decoration: none;
+	color: inherit;
+}
+small {
+	font-size: @type-small-text-size;
+}
+
+strong {
+	font-weight: @type-strong-weight;
+}
+
+
+
+sub, sup {
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+b {
+	font-weight: inherit;
+}
+
+i {
+	font-style: inherit;
+}
+
+
+ul, ol {
+	padding-left: 	@type-list-indent;
+	margin: 		@type-list-margin;
+	list-style-position: @type-list-style-position;
+	li {
+		margin: @type-list-item-margin;
+		line-height: @type-list-line-height;
+	}
+}
+
+
+
+.type-title(){
+	font-family: 	@font-primary-font-family;
+	display: block;
+}
+
+.type-title-xl(){
+	.type-title();
+	font-size: @type-title-xl-size;
+	line-height: @type-title-xl-line-height;
+	font-weight: @type-title-xl-weight;
+	color: @type-title-xl-color;
+	margin: @type-title-xl-margin;
+}
+.type-title-lg(){
+	.type-title();
+	font-size: @type-title-lg-size;
+	line-height: @type-title-lg-line-height;
+	font-weight: @type-title-lg-weight;
+	color: @type-title-lg-color;
+	margin: @type-title-lg-margin;
+}
+.type-title-md(){
+	.type-title();
+	font-size: @type-title-md-size;
+	line-height: @type-title-md-line-height;
+	font-weight: @type-title-md-weight;
+	color: @type-title-md-color;
+	margin: @type-title-md-margin;
+}
+.type-title-sm(){
+	.type-title();
+	font-size: @type-title-sm-size;
+	line-height: @type-title-sm-line-height;
+	font-weight: @type-title-sm-weight;
+	color: @type-title-sm-color;
+	margin: @type-title-sm-margin;
+}
+.type-title-xs(){
+	.type-title();
+	font-size: @type-title-xs-size;
+	line-height: @type-title-xs-line-height;
+	font-weight: @type-title-xs-weight;
+	color: @type-title-xs-color;
+	margin: @type-title-xs-margin;
+}
+
+
+.type-label() {
+	color: 			@type-label-color;
+	font-size: 		@type-label-size;
+	line-height: 	@type-label-line-height;
+	font-weight:	@type-label-weight;
+	margin: 		@type-label-margin;
+}
+.type-small-text() {
+	font-size: @type-small-text-size;
+	line-height: @type-small-text-line-height;
+	font-weight: @type-small-text-weight;
+	color: @type-small-text-color;
+}
+
+
+
+
+// Old Typography Styles - Deprecated
+
+.page-title{
+	.type-title-lg();
+}
+.section-title{
+	.type-title-lg();
+}
+.sub-section-title {
+	.type-title-md();
+}
+.caption-title{
+	.type-title-sm();
+}
+
+.small-text{
+	.type-small-text();
+}
+.label {
+	.type-label();
+}
+
+
+
+
+

@@ -1,0 +1,93 @@
+@import "../../core.less";
+
+section#global-notification {
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	width: 100%;
+	background-color: @color-info;
+	top: -1000px;
+	z-index: 10000;
+	main {
+		margin: 0 auto;
+		text-align: center;
+		position: relative;
+		h1 {
+			margin: 0;
+			padding: 10px 50px;
+			font-size: 15px;
+			color: @color-white;
+			display: inline-block;
+		}
+		i {
+			padding: 5px;
+			color: @color-white;
+			&.exp-ux-info {
+				padding: 15px 15px 0;
+				display: block;
+				@media (min-width: @screen-sm-min) {
+					display: inline-block;
+					position: absolute;
+					left: 0;
+				}
+			}
+			&.exp-ux-close {
+				position: absolute;
+				right: 0;
+				top: 0;
+				&:hover {
+					cursor: pointer;
+				}
+				@media (min-width: @screen-sm-min) {
+					display: inline-block;
+					position: absolute;
+					padding: 15px;
+				}
+			}
+		}
+		a {
+			margin-left: -50px;
+			padding: 10px 50px 10px 0;
+			font-size: 15px;
+			font-weight: 100;
+			color: @color-white;
+			text-decoration: underline;
+			&:hover {
+				color: initial;
+			}
+		}
+	}
+	&.open {
+		.transition(.3s, ease-out);
+		.translate(0, 1000px);
+	}
+	&.close {
+		.transition(1s, ease-in);
+		.translate(0, 0);
+	}
+	&.success {
+		background-color: @color-success;
+		i.exp-ux-info:before {
+			content: "\e638";
+		}
+	}
+	&.warning {
+		background-color: @color-warning;
+		i.exp-ux-info:before {
+			content: "\e632";
+		}
+	}
+	&.danger {
+		background-color: @color-danger;
+		i.exp-ux-info:before {
+			content: "\e62a";
+		}
+	}
+	&.accent {
+		background-color: @color-accent;
+		color: @color-darkGray;
+		i.exp-ux-info:before {
+			content: "\e64a";
+		}
+	}
+}

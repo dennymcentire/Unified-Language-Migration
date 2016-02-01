@@ -1,0 +1,62 @@
+// Experticity Pattern Library
+// Pattern Library Icons
+// Loaded into core.less
+
+[class^="icon-expert-"], [class*=" icon-expert-"] {
+	font-family: 'Expert Icon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	font-size: 72px;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-expert-medium {
+	font-size: 44px;
+}
+.icon-expert-small {
+	font-size: 36px;
+}
+.icon-expert-mini {
+	font-size: 24px;
+}
+
+.icon-light{
+  font-weight: 300;
+}
+
+.icon-circle(@background-color:@color-primary, @color:@white, @font-size:24px){
+  background: @background-color;
+  color: @color;
+  border-radius: 50%;
+  font-size: @font-size;
+  width: @font-size;
+  height: @font-size;
+  overflow: hidden;
+  border: solid 0.05em @background-color;
+  &.icon-light{
+    border: solid 0.025em @color;
+    &:before{
+      position: relative;
+      top: -0.0125em;
+      left: -0.0125em;
+    }
+  }
+  &:before{
+    position: relative;
+    top: -0.052em;
+    left: -0.035em;
+  }
+}
+
+
+.icon-circle-outline(@color:@base-color, @font-size:48px){
+  .icon-circle(@color, @color, @font-size);
+  background: transparent;
+  color: @color;
+}

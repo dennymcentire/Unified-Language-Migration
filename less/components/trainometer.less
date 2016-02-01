@@ -1,0 +1,77 @@
+// Experticity Pattern Library
+// Pattern Library Media
+
+
+/******************************************************************
+  Trainometer Component Styles
+
+  Example:
+  <div class="trainometer">
+      <div class="trainometer-step completed"><div>&nbsp;</div></div>
+      <div class="trainometer-step completed"><div>&nbsp;</div></div>
+      <div class="trainometer-step"><div>&nbsp;</div></div>
+      <div class="trainometer-step"><div>&nbsp;</div></div>
+      <div class="trainometer-step"><div>&nbsp;</div></div>
+  </div>
+*******************************************************************/
+
+.trainometer {
+  cursor: default;
+  display: table;
+  margin-left: -(@trainometer-cell-padding / 2);
+  table-layout: fixed;
+  .user-select(none);
+  width: 100% + @trainometer-cell-padding;
+
+  .trainometer-step {
+    display: table-cell;
+    height: @trainometer-cell-height;
+    line-height: @trainometer-cell-height;
+    padding-left: (@trainometer-cell-padding / 2);
+    padding-right: (@trainometer-cell-padding / 2);
+
+    & > div {
+      background: @trainometer-cell-color;
+      content: " ";
+    }
+
+    &.completed > div {
+      background-color: @trainometer-cell-color-completed;
+    }
+  }
+
+  // Small (> 15 items)
+  &.sm {
+    @factor: 4;
+    margin-left: -(@trainometer-cell-padding / @factor);
+    width: 100% + (@trainometer-cell-padding / (@factor / 2));
+
+    .trainometer-step {
+      padding-left: (@trainometer-cell-padding / @factor);
+      padding-right: (@trainometer-cell-padding / @factor);
+    }
+  }
+
+  // XSmall (> 30 items)
+  &.xs {
+    @factor: 8;
+    margin-left: -(@trainometer-cell-padding / @factor);
+    width: 100% + (@trainometer-cell-padding / (@factor / 2));
+
+    .trainometer-step {
+      padding-left: (@trainometer-cell-padding / @factor);
+      padding-right: (@trainometer-cell-padding / @factor);
+    }
+  }
+
+  // Flat (No Spacing)
+  &.flat {
+    margin-left: 0;
+    width: 100%;
+
+    .trainometer-step {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

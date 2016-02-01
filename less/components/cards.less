@@ -1,0 +1,75 @@
+// Experticity Pattern Library
+// Pattern Library Tables
+// Loaded into cards.less
+
+.card {
+  transition: width 0.5s ease-in, height 0.5s ease-in;
+  .border-radius();
+  .clearfix;
+  .shadow-level-1;
+  background: @card-background;
+  overflow: hidden;
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  h1 {
+    .card-title;
+  }
+   	p {
+		.default-text();
+		color: @color-darkGray;	
+	}	 
+  a {
+    .card-link;
+  }
+  .card-link-arrow:after {
+      content: "\f054"; //Chevron Right
+      font-family: @font-icon-font;
+      float: right;
+      font-size: 14px;
+  }
+  .card-details {
+    padding: 0px @card-padding @card-padding;
+  }
+}
+
+.card-title{
+  .type-title-sm;
+  margin: @card-padding;
+}
+
+.card-link{
+  color: @card-type-link-color;
+  margin: @card-padding;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: block;
+  border-bottom: none;
+  cursor: pointer;
+}
+
+
+
+
+// wrap cards in this to add margins using the grid - Must be in a card-container
+
+.card-wrapper {
+  .clearfix;
+  .make-column(12, @card-margin-sm);
+  .make-sm-column(6, @card-margin-sm);
+  .make-lg-column(4, @card-margin-lg);
+  .make-xl-column(4, @card-margin-xl);
+
+}
+.card-small-wrapper {
+  .clearfix;
+  .make-column(12, @card-margin-sm);
+  .make-xs-column(6, @card-margin-xs);
+  .make-sm-column(6, @card-margin-sm);
+  .make-md-column(4, @card-margin-md);
+  .make-lg-column(4, @card-margin-lg);
+  .make-xl-column(3, @card-margin-xl);
+  
+}

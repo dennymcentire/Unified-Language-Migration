@@ -1,0 +1,99 @@
+// Experticity Pattern Library
+// Pattern Library Logos
+// Loaded into shadows.less
+
+
+.shadow-level-1 {
+	.box-shadow(@shadow-level-1);
+}
+
+.shadow-level-2 {
+	.box-shadow(@shadow-level-2);
+}
+
+.shadow-level-3 {
+	.box-shadow(@shadow-level-3);
+}
+
+.shadow-level-4 {
+	.box-shadow(@shadow-level-4);
+}
+
+.shadow-level-5 {
+	.box-shadow(@shadow-level-5);
+}
+
+.shadow-hover-1 {
+    &:hover {
+        .box-shadow(@shadow-level-1);    
+    }
+     .transition(@shadow-transition);
+}
+
+.shadow-hover-2 {
+    &:hover {
+        .box-shadow(@shadow-level-2);    
+    }
+    .transition(@shadow-transition);
+}
+
+.shadow-hover-3 {
+    &:hover {
+        .box-shadow(@shadow-level-3);    
+    }
+    .transition(@shadow-transition);
+}
+
+.shadow-hover-4 {
+    &:hover {
+        .box-shadow(@shadow-level-4);    
+    }
+    .transition(@shadow-transition);
+}
+
+.shadow-hover-5 {
+    &:hover {
+        .box-shadow(@shadow-level-5);    
+    }
+    .transition(@shadow-transition);
+}
+
+// or use the base mixin
+.shadow-level(@level: 1){
+    & when (@level = 1) {
+        box-shadow: @shadow-level-1;
+    }
+    & when (@level = 2) {
+        box-shadow: @shadow-level-2;
+    }
+    & when (@level = 3) {
+        box-shadow: @shadow-level-3;
+    }
+    & when (@level = 4) {
+        box-shadow:@shadow-level-4;
+    }
+    & when (@level = 5) {
+        box-shadow: @shadow-level-5;
+    }
+}
+
+
+.text-shadow-level-1 {
+    text-shadow: @text-shadow-level-1;
+}
+
+.text-shadow-level-2 {
+    text-shadow: @text-shadow-level-2;
+}
+
+.text-shadow-level-3 {
+    text-shadow: @text-shadow-level-3;
+}
+
+.text-shadow-level-4 {
+    text-shadow: @text-shadow-level-4;
+}
+
+.text-shadow-level-5 {
+    text-shadow: @text-shadow-level-5;
+}

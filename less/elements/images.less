@@ -1,0 +1,35 @@
+// Experticity Pattern Library
+// Pattern Library images
+// Loaded into core.less
+
+
+img{
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 100%;
+	height: auto;
+}
+	.circle {
+		.border-radius(50%);
+	}
+	.thumbnail {
+		border: solid @image-thumbnail-border-width @image-thumbnail-border-color;
+		box-shadow: @image-thumbnail-shadow;
+	}
+	.avatar-small{
+		.avatar();
+		width: @image-avatar-small-size;
+		height: @image-avatar-small-size;
+	}
+	.avatar-large{
+		.avatar();
+		width: @image-avatar-large-size;
+		height: @image-avatar-large-size;
+	}
+
+.avatar() {
+	display: block;
+	border: solid @image-thumbnail-border-width @image-thumbnail-border-color;
+	box-shadow: @image-thumbnail-shadow;
+	.border-radius(50%);
+}

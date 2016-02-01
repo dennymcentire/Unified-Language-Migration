@@ -1,0 +1,287 @@
+// Experticity Pattern Library
+// Pattern Library Alerts
+// Loaded into core.less
+
+.alert(@background, @icon) {
+	width: 100%;
+	background: white;
+	// .shadow-level-1;
+	position: relative;
+	display: block;
+	margin: 10px auto;
+	min-height: 48px;
+	overflow: hidden;
+	border: solid 1px @background;
+	.clearfix();
+	.border-radius();
+	.alert-before, .alert-after{
+		font-family: 'FontAwesome';
+		height: 100%;
+		min-width: 48px;
+		width: 48px;
+		max-width: 48px;
+		text-align: center;
+		vertical-align: middle;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		i{
+			position: absolute;
+			.center-vertical();
+			display: block;
+			&:before {
+				display: block;
+				width: 48px;
+			}
+		}
+	}
+	.alert-before {
+		left: 0;
+		color: white;
+		background-color: @background;
+		.border-radius();
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}	
+	.alert-content{
+		padding: 12px;
+		vertical-align: middle;
+		display: block;
+		margin: 0 48px;
+	}
+	.alert-after{
+		right: 0;
+		color: @color-coolGray-dark;
+		cursor: pointer;
+		.border-radius();
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		&:hover {
+			color:  @color-coolGray-darker;
+		}
+	}
+	
+}
+
+.alert-mini(){
+	opacity: 1;
+	width: 345px;
+	overflow: visible;
+	box-shadow: none;
+	border-width: 1px;
+	&:after{
+		content: '';
+		position: absolute;
+		top: -7px;
+		right: 18px;
+		width: 0;
+		height: 0;
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+		border-bottom: 7px solid white;
+	}
+}
+
+.alert-info{
+	.alert(@color-info-dark, '\f05a') ;
+}
+
+.alert-info-mini{
+	.alert(@color-info-dark, '\f05a');
+	.alert-mini;
+}
+
+.alert-success{
+	.alert(@color-success-dark, ''); //\f14a
+}
+
+.alert-success-mini{
+	.alert(@color-success-dark, '\f14a') ;
+	.alert-mini;
+}
+.alert-error{
+	.alert(@color-primary-darker, '\f071') 
+}
+
+.alert-error-mini{
+	.alert(@color-primary-darker, '\f071');
+	.alert-mini;
+}
+
+.alert-warning{
+	.alert(@color-warning-dark, '\f06a') 
+}
+
+.alert-warning-mini{
+	.alert(@color-warning-dark, '\f06a');
+	.alert-mini; 
+}
+ 
+
+.alert.animate{
+	.animation(alert-out 0.5s);
+	max-height: 0px;
+	min-height: 0;
+	opacity: 0;
+	width: 100px;
+	.alert-content {
+		.transition(all 0.5s ease 1s);
+		opacity: 0;
+		max-height: 0px;
+		overflow: hidden;
+	}
+}
+.alert.animate.alert-in{
+	.animation(alert-in 1s);
+	max-height: 400px;
+	min-height: 48px;
+	opacity: 1;
+	width: 100%;
+	.alert-content {
+		max-height: 200px;
+		opacity: 1;
+	}
+}
+
+@alert-2-transition-speed: 1s;
+@alert-2-transition-delay: 1s;
+
+.alert.animate-2{
+	.animation(alert-out-2 @alert-2-transition-speed);
+	margin: 10px 0 20px;
+	max-height: 0px;
+	opacity: 0;
+	max-width: 0;
+	.alert-content {
+		transition: all 0s ease @alert-2-transition-delay, opacity 0.3s ease @alert-2-transition-delay;
+		opacity: 0;
+		max-height: 0px;
+		padding: 0;
+		width: 0px;
+		overflow: hidden;
+	}
+	.alert-after{
+		transition: all 0.3s ease 0s;
+		opacity: 0;
+		min-width: 0px;
+		width: 0px;
+		max-width: 0px;
+
+	}
+}
+.alert.animate-2.alert-in{
+	.animation(alert-in-2 @alert-2-transition-speed);
+	max-height: 200px;
+	opacity: 1;
+	max-width: 100%;
+	.alert-content {
+		max-height: 200px;
+		opacity: 1;
+		padding: 12px;
+		width: 100%;
+	}
+	.alert-after{
+		transition: all 0.3s ease 0.7s;
+		opacity: 1;
+		min-width: 48px;
+		width: 48px;
+		max-width: 48px;
+
+	}
+}
+
+
+@-webkit-keyframes alert-in {
+	0% {
+		width: 100px;
+		opacity: 1;
+		max-height: 0px;
+		min-height: 0px;
+		
+	}
+	45% {
+		width: 100px;
+		opacity: 1;
+		max-height: 48px;
+		min-height: 48px;
+	}
+	100% {
+		width: 100%;
+		opacity: 1;
+		max-height: 200px;
+	}
+}
+
+@-webkit-keyframes alert-out {
+	0% {
+		width: 100%;
+		opacity: 1;
+		max-height: 200px;
+	}
+	65% {
+		width: 10px;
+		opacity: 1;
+		max-height: 48px;
+	}
+	100% {
+		width: 0px;
+		opacity: 0;
+		max-height: 0px;
+		
+	}
+	
+	
+}
+
+@-webkit-keyframes alert-in-2 {
+	0% {
+		max-width: 0px;
+		max-height: 0px;
+		opacity: 0;
+		
+	}
+	25% {
+		max-width: 48px;
+		max-height: 48px;
+		opacity: 1;
+	}
+
+	45% {
+		max-width: 48px;
+		max-height: 48px;
+		opacity: 1;
+	}
+	100% {
+		max-width: 100%;
+	}
+}
+
+
+@-webkit-keyframes alert-out-2 {
+	100% {
+		max-width: 0px;
+		max-height: 0px;
+		opacity: 0;
+		
+	}
+	75% {
+		max-width: 48px;
+		opacity: 1
+	}
+	50% {
+		max-width: 48px;
+		opacity: 1
+	}
+	
+	0% {
+		max-width: 100%;
+		opacity: 1;
+		max-height: 48px;
+	}
+}
+
+//Todo: Move this out into components
+
+
+
+

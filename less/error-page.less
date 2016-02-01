@@ -1,0 +1,20 @@
+// Experticity Error Page
+
+
+// These are the explitly required styles to make this file work if it were to be used alongside a compiled core.css.
+//@import 'variables/variables';
+//@import 'utilities/mixins';
+//@import "utilities/responsive/variables";
+//@import "utilities/responsive/grid";
+//@import "utilities/responsive/grid-mixin";
+//@import "utilities/responsive/grid-framework-mixin";
+//@import 'styles/animations';
+//@import 'styles/fonts';
+//@import 'elements/typography';
+
+
+// We are instead opting to pull in all of the core styles since we get no benefit from using a separate core.css that is not used as a standalone file.
+@import './core.less';
+
+// Import the actual styles for the error-page
+@import 'components/error-page';

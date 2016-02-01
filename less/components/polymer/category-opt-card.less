@@ -1,0 +1,91 @@
+@import "../../core.less";
+
+.category-opt-card {
+  color: @color-darkGray-darker;
+  height: 192px;
+  width: 141px;
+
+   @media (min-width: @screen-xl) {
+     width: 170px;
+   }
+
+  .category-opt-card-content {
+    height: 161px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 18px 40px;
+
+    // iPhone 4/5
+    @media (max-width: @screen-xs) {
+     padding: 18px 25px;
+    }
+
+    i {
+     border: 2px solid @color-darkGray-darker;
+     overflow: hidden;
+     border-radius: 50%;
+      height: 90px;
+      width: 90px;
+
+      font-weight: 100;
+      font-size: 90px;
+    }
+  }
+}
+
+.category-opt-card-controls {
+ display: block;
+ position: relative;
+ bottom: 0px;
+ height: 21px;
+ border-top: 2px solid @color-lightGray;
+}
+
+.category-opt-card-controls div:nth-of-type(1) {
+ border-right: 2px solid @color-lightGray;
+}
+
+.category-opt-card-controls-option {
+ .noselect();
+ cursor: pointer;
+ display: inline-block;
+ box-sizing: border-box;
+ text-align: center;
+ width: 50%;
+ height: 31px;
+ line-height: 31px;
+}
+
+.category-opt-card-controls-option.on {
+ color: @color-success-darker;
+}
+
+.category-opt-card-controls-option.off {
+ color: @color-primary-dark;
+}
+
+.category-opt-card-controls-option.on.active {
+ color: white;
+ background-color: @color-success-darker;
+}
+
+.category-opt-card-controls-option.off.active {
+ color: white;
+ background-color: @color-primary-dark;
+}
+
+.category-opt-card-container {
+  .make-xs-column(6, 0);
+  .make-sm-column(4, 0);
+  .make-md-column(3,0);
+  .make-lg-column(2,0);
+
+ padding: 6px;
+}
+
+.category-opt-card {
+ width: 100%;
+ margin: 0;
+ padding:  0;
+}
+

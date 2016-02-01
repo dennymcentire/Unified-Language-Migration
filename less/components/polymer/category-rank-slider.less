@@ -1,0 +1,87 @@
+@import "../../core.less";
+
+.category-rank-select-top {
+	display: none;
+
+	@media (min-width: @screen-md) {
+		height: 55px;
+		font-size:  12px;
+		&.middle {
+			display: block;
+			float: none;
+		}
+	    .category-rank-slider-top {
+			position: absolute;
+			top: 1px;
+			height: 2px;
+			border: 1px solid @color-coolGray;
+			border-radius: 2px;
+			width: 100%;
+			margin: 12px 0;
+	    }
+	    .rank-slider {
+	    	margin: 15px 0 0;
+	    	padding: 0 20px;
+	    	position: relative;
+	    	display: block;
+	    	height: 25px;
+	    	overflow: hidden;
+	    }
+
+		.ranks {
+			margin: 0;
+	    	padding: 0 20px;
+	    	position: relative;
+	    	display: block;
+	    	height: 25px;
+	    	overflow: hidden;
+			font-size: @type-small-text-size;
+			font-weight: 100;
+			color: @color-coolGray-darker;
+			& > span {
+				display: inline-block;
+				white-space: nowrap;
+				width: 30%;
+				border-left: 1px solid;
+				text-align: center;
+				@media (min-width: @screen-lg) {
+					width: 16%;
+				}
+			}
+			& > span:nth-of-type(1) {
+				border: none;
+			}
+			& > span:nth-child(odd){
+				display: none;
+				@media (min-width: @screen-lg) {
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
+#category-rank-bar {
+	top: 12px;
+	height: 4px;
+	width: 95%;
+	background: red;
+	display: block;
+	position: relative;
+	border-radius: 2px;
+	background-color: @color-mediumGray-light;
+	#category-rank-fill {
+		background: @color-primary;
+		display: block;
+		height: 4px;
+	}
+	#category-rank-handle {
+		position: absolute;
+		width: 15px;
+		height: 15px;
+		border: 2px solid @color-white;
+		border-radius: 50%;
+		background: @color-primary;
+		top: -6px;
+		box-shadow: @shadow-level-1;
+	}
+}

@@ -1,0 +1,59 @@
+// Experticity Pattern Library
+// Pattern Library Badges
+// Loaded into core.less
+
+
+.badge(@background: @badge-background, @color: @badge-color ) {
+	display: inline-block;
+	min-width: 10px;
+	padding: @badge-padding;
+	font-size: @badge-font-size;
+	font-weight: @badge-font-weight;
+	color: @color;
+	line-height: @badge-line-height;
+	vertical-align: baseline;
+	white-space: nowrap;
+	text-align: center;
+	box-shadow: @label-shadow;
+	background-color: @background;
+
+	.border-radius(@badge-border-radius);
+
+	// Empty badges collapse automatically (not available in IE8)
+	&:empty {
+		display: none;
+	}
+
+}
+
+
+
+.badge-default {
+	.badge(@font-color);
+}
+
+.badge-primary {
+	.badge(@color-primary);
+}
+
+.badge-info {
+	.badge(@color-info-dark);
+}
+
+.badge-success {
+	.badge(@color-success-dark);
+}
+
+.badge-warning {
+	.badge(@color-warning);
+}
+
+.badge-danger {
+	.badge(@color-danger-dark);
+}
+
+.badge-button(@bg: @badge-button-color){
+	.badge(@color-white, @bg);
+	margin-left: @badge-button-margin-left;
+	box-shadow: none;
+}
