@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="43px" height="45px" viewBox="0 0 43 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>UserVoice Trigger</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.419607843   0 0 0 0 0.396078431   0 0 0 0 0.37254902  0 0 0 0.14 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="1280-::-Max-Width" sketch:type="MSArtboardGroup" transform="translate(-1229.000000, -1437.000000)">
+            <g id="UserVoice-Trigger-&amp;-Toast" sketch:type="MSLayerGroup" transform="translate(944.000000, 1091.000000)">
+                <g id="UserVoice-Trigger" transform="translate(286.000000, 347.000000)" sketch:type="MSShapeGroup">
+                    <path d="M36.769,33.657 L3.769,33.657 C2.119,33.657 0.769,32.307 0.769,30.657 L0.769,3.657 C0.769,2.007 2.119,0.657 3.769,0.657 L36.769,0.657 C38.419,0.657 39.769,2.007 39.769,3.657 L39.769,30.657 C39.769,32.307 38.419,33.657 36.769,33.657 Z M34.169,33.657 L34.169,41.4 L26.088,33.657 L34.169,33.657 Z" id="Fill-1" fill="#DC3E39" filter="url(#filter-1)"></path>
+                    <path d="M26.268,7.09 L21.124,15.394 C20.931,15.697 21.135,15.947 21.576,15.95 L23.812,15.961 C24.089,15.962 24.267,16.058 24.31,16.203 C24.331,16.269 24.321,16.345 24.279,16.427 C24.275,16.435 24.273,16.441 24.269,16.448 L24.268,16.449 C24.259,16.466 24.249,16.482 24.237,16.499 L24.235,16.5 C24.235,16.501 24.235,16.501 24.233,16.501 L15.067,27.678 C14.855,27.967 14.61,28.006 14.397,27.88 C14.18,27.751 14.079,27.527 14.269,27.224 L19.414,18.921 C19.606,18.617 19.402,18.367 18.962,18.364 L16.726,18.353 C16.449,18.352 16.271,18.255 16.228,18.112 C16.207,18.045 16.216,17.969 16.259,17.886 C16.262,17.88 16.265,17.872 16.269,17.867 L16.269,17.865 C16.279,17.848 16.289,17.832 16.3,17.816 L16.303,17.815 C16.303,17.813 16.303,17.813 16.304,17.812 L25.471,6.636 C25.683,6.347 25.927,6.308 26.14,6.435 C26.358,6.563 26.46,6.788 26.268,7.09" id="Fill-2" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
